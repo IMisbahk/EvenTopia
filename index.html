@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventopia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body></body>
+    <nav class="navbar">
+        <a><img src="images/logo (2).svg" class="logo" alt="logo"></a>
+        <ul>
+            <li class="navlink"><a href="myevents.html">My Events</a></li>
+        </ul>
+    </nav>
+    <div class="slider">
+        <div class="slides">
+            <div>
+                <img class="slide" src="images/image 1.jpg" alt="event 1 image">
+            </div>
+            <div>
+                <img class="slide" src="images/image 2.jpg" alt="event 2 image">
+            </div>
+            <div>
+                <img class="slide" src="images/image 3.jpg" alt="event 3 image">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    
+    <div class="mainsec">
+        <div class="event event1" onclick="openTile(0)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 1</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(0)">Add to Cart</button>
+        </div>
+        <div class="event event2" onclick="openTile(1)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 2</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+        </div>
+        <div class="event event3" onclick="openTile(2)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 3</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+        </div>
+        <div class="event event4" onclick="openTile(3)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 4</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+        </div>
+        <div class="event event5" onclick="openTile(4)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 5</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+        </div>
+        <div class="event event6" onclick="openTile(5)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 6</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(5)">Add to Cart</button>
+        </div>
+        <div class="event event7" onclick="openTile(6)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 7</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(6)">Add to Cart</button>
+        </div>
+        <div class="event event8" onclick="openTile(7)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;">Event 8</h4>
+          <button class="add-to-cart-btn" onclick="addToCart(7)">Add to Cart</button>
+        </div>
+        <div class="event event9" onclick="openTile(8)">
+          <span class="close-btn">×</span>
+          <img src="https://via.placeholder.com/150" alt="" class="placeholder">
+          <h4 style="color: black;" >Event 9</span>
+          <button class="add-to-cart-btn" onclick="addToCart(8)">Add to Cart</button>
+        </div>
+      </div>
+    
+    <footer>
+        Made with ❤️ By Misbah Khursheed
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>

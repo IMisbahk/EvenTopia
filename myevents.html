@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Events</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            
+            .banner {
+                background-color: #0869d8;
+                height: 50vh;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            
+            .banner h1 {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+            
+            .browse-more {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: 5px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 5px;
+            }
+            
+            .cart-container {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cart-event {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 10px;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                flex-direction: row;
+            }
+    
+            .cart-event img {
+                width: 100px; /* Adjust as needed */
+                height: auto;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+    
+            .cart-event h4 {
+                flex: 1;
+                margin: 0;
+                color: #333;
+                text-align: left;
+            }
+    
+            .remove-btn {
+                background-color: #d9534f;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 8px 16px;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background-color 0.3s ease;
+            }
+    
+            .remove-btn:hover {
+                background-color: #c9302c;
+            }
+            
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>My Events</h1>
+        <a href="index.html" class="browse-more">&lt; Browse for more events</a>
+    </div>
+    <div class="cart-container">
+        <!-- Events will be dynamically added here -->
+    </div>
+    <footer>
+        Made with ❤️ By Misbah Khursheed
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
