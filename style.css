@@ -9,7 +9,7 @@
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    color: black;
+    color: white;
 }
  body{
     overflow-x: hidden;
@@ -33,7 +33,7 @@
     margin: 0; 
     padding: 1rem;
     font-size: large;
-    color: black;
+    color: white;
 }
 
 .navlink:hover {

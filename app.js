@@ -1,4 +1,4 @@
-// Carousel Code
+// move carousel
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
 let intervalId = null;
@@ -37,7 +37,7 @@ function nextSlide(){
     showSlide(slideIndex);
 }
 
-// Expanding Event Card
+// event expand
 let events = document.querySelectorAll('.event');
 let overlay = document.querySelector('.overlay');
 
@@ -63,7 +63,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Add to Cart
+// atc using lclstorage
 let cart = [];
 
 function addToCart(index) {
@@ -91,24 +91,30 @@ function loadCart() {
 
 function renderCart() {
     const cartContainer = document.querySelector('.cart-container');
-    cartContainer.innerHTML = '';
-    cart.forEach((item, index) => {
-        const eventElement = document.createElement('div');
-        eventElement.classList.add('cart-event');
-        eventElement.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
-            <h4>${item.name}</h4>
-            <button class="remove-btn" onclick="removeFromCart(${index})">Remove from Cart</button>
-        `;
-        cartContainer.appendChild(eventElement);
-    });
-}
+    const emptyCartMessage = document.getElementById('emptyCartMessage');
 
+    if (cart.length === 0) {
+        emptyCartMessage.style.display = 'block';
+    } else {
+        emptyCartMessage.style.display = 'none';
+        cart.forEach((item, index) => {
+            const eventElement = document.createElement('div');
+            eventElement.classList.add('cart-event');
+            eventElement.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <h4>${item.name}</h4>
+                <button class="remove-btn" onclick="removeFromCart(${index})">Remove from Cart</button>
+            `;
+            cartContainer.appendChild(eventElement);
+        });
+    }
+}
+    
 function removeFromCart(index) {
     let cartEvents = JSON.parse(localStorage.getItem('cartEvents')) || [];
     cartEvents.splice(index, 1);
     localStorage.setItem('cartEvents', JSON.stringify(cartEvents));
-    loadCart(); // Reload the cart after removal
+    location.reload(); 
 }
 
 document.addEventListener("DOMContentLoaded", loadCart);
